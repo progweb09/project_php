@@ -12,9 +12,9 @@ if (isset($_POST['enviar']) && $_POST["captcha"] && $_POST["captcha"]!="" && $_S
 	$header .= "Content-type \r\n";
 	
 	$mensaje ="Este mensaje fue enviado por" . $nombre. "\r\n";
-	$mensaje ="Su email es" . $mail. "\r\n";
-	$mensaje ="Mensaje" . $_POST ['mensaje']. "\r\n";
-	$mensaje ="Enviado el" . date('d/m/Y', time());
+	$mensaje .="Su email es" . $mail. "\r\n";
+	$mensaje .="Mensaje" . $_POST ['mensaje']. "\r\n";
+	$mensaje .="Enviado el" . date('d/m/Y', time());
 	
 	$para = "info@micorreo.com.ar"; // receptor del mail
 	$asunto = "Pedido de Informacion de:" . $nombre;
